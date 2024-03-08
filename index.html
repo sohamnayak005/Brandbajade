@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+         body{
+            background-color: red;
+         }
+         .nav_bar{
+            background-color: #E92226;
+            height:140px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         
+         }
+         .logo_div{
+            width:400px;
+            text-align:center;
+         }
+         .img1{
+            height:140px;
+         }
+         .img2{
+            height:110px;
+            transform: translate(-117%, -14%);
+         }
+         .img3{
+            height:50px;
+            transform: translate(-400%, -80%);
+         }
+         .nav_btn{
+            padding:9px;
+            font-size: 15px;
+            outline: none;
+            border:2px solid white;
+            text-align: center;
+            margin-right:30px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            border-radius:4px;
+         }
+         /* Slider - 1 */
+         .container{
+            height:500px;
+            margin: auto;
+            position:relative;
+            margin-top:30px;
+            width:95%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            margin-bottom:50px;
+         }
+         .slide_image img{
+            height:500px;
+            cursor: pointer;
+            transition:linear 1s;
+            /* transition:transform 1s; */
+         }
+         .slide_image img:hover{
+            transform:scale(1.1);
+         }
+         .slide_image{
+            padding:15px;
+         }
+         .slider_container{
+            display: flex;
+            width: calc(250px * 18);
+            animation:scroll 20s linear infinite;
+         }
+
+         @keyframes scroll{
+            0%{
+                transform:translate(0);
+            }
+            100%{
+                transform: translateX(calc(-250px * 9));
+            }
+         }
+
+         /* Slider 2 */
+         
+         .slider_container1{
+            display: flex;
+            width: calc(250px * 18);
+            animation:scroll1 20s linear infinite;
+         }
+         @keyframes scroll1{
+            100%{
+                transform:translate(0);
+            }
+            0%{
+                transform: translateX(calc(-250px * 9));
+            }
+         }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="nav_bar">
+            <i class="fa-solid fa-bars" style="color:white; font-size:40px;margin:30px;cursor: pointer;"></i>
+            <div class="logo_div">
+                <img src="https://brandbajade.com/assets/logo/big_b_part.svg" alt="" class="nav_img img1">
+                <img src="https://brandbajade.com/assets/logo/small_b_part.svg" alt="" class="nav_img img2">
+                <img src="https://brandbajade.com/assets/logo/c_part.svg" alt="" class="nav_img img3">
+            </div>
+            <button class="nav_btn">Contact Now</button>
+        </nav>
+        <div class="slider">
+            <!-- Slider 1 -->
+                  <div class="container">
+                    <div class="slider_container">
+                    <div class="slide_image">
+                        <img src="./image/evo_1.jpg" alt="">
+                    </div>
+                    <div class="slide_image">
+                        <img src="./image/evo_2.jpg" alt="">
+                    </div>
+                    <div class="slide_image">
+                        <img src="./image/evo_3.jpg" alt="">
+                    </div>
+                    <div class="slide_image">
+                        <img src="./image/evo_4.jpg" alt="">
+                    </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Slider 2 -->
+                  <div class="container">
+                    <div class="slider_container1">
+                    <div class="slide_image">
+                        <img src="./image/evo_1.jpg" alt="">
+                    </div>
+                    <div class="slide_image">
+                        <img src="./image/evo_2.jpg" alt="">
+                    </div>
+                    <div class="slide_image">
+                        <img src="./image/evo_3.jpg" alt="">
+                    </div>
+                    <div class="slide_image">
+                        <img src="./image/evo_4.jpg" alt="">
+                    </div>
+                    </div>
+                  </div>          
+                     
+                </div>
+    </div>
+</body>
+</html>
